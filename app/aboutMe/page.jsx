@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CreateImgAnimate from "../components/animates/pageAboutMe/createImgAnimation";
+import Link from "next/link";
 
 const imagesForStack = [
   "html",
@@ -28,6 +29,7 @@ const AboutMe = () => {
         <h2 className="text-4xl h-fit w-fit bg-orange-600 rounded-3xl py-2 px-5 my-0 mx-auto hover:scale-110 hover:bg-[#272727] hover:text-[#18dcff] transition-all duration-300">
           Sobre mí
         </h2>
+        <Link href={"/"}>Volver</Link>
       </div>
       <div className="outline-2 outline outline-orange-600 bg-slate-700 shadow-md my-0 mx-auto rounded-[50px] py-5 px-12 transition-all duration-500 w-[95%] max-w-[800px]">
         <p className="mb-4">

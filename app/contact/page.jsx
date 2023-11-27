@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Form from "../components/contactForm/form";
 import ImageSocialMedia from "../components/contactForm/imagesSocialMedia";
 
@@ -24,6 +25,7 @@ export default function Contact() {
         <h2 className="text-4xl h-fit bg-orange-800 rounded-[2.5rem] py-2 px-3 mt-3 mx-5 font-normal shadow-lg">
           Contacto
         </h2>
+        <Link href={"/"}>Volver</Link>
       </div>
       <div className="grid">
         <ImageSocialMedia images={images} />
