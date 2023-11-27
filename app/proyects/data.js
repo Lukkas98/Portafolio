@@ -1,0 +1,66 @@
+export default [
+  {
+    id: 1,
+    title: "Videogames",
+    subtitle: "Página hecha con RAW una API de videojuegos",
+    coverImage: "/images/Pi.png",
+    images: ["/images/Pi.png", "/images/Pi2.png", "/images/Pi3.png"],
+    technologies: [
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "redux",
+      "node-js",
+      "express-js",
+      "postgresql",
+    ],
+    text: `La aplicación cuenta con ordenamientos combinados, paginado dinámico y la posibilidad de buscar cualquier videojuego.
+      posee una base de datos propia donde se puede mediante un formulario crear nuevos juegos`,
+  },
+  {
+    id: 2,
+    title: "Programa Red",
+    subtitle: "Red social simplificada y en español para programadores",
+    coverImage: "/images/Red.png",
+    images: [
+      "/images/Red.png",
+      "/images/Red2.png",
+      "/images/Red3.png",
+      "/images/Red4.png",
+    ],
+    technologies: [
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "redux",
+      "node-js",
+      "express-js",
+      "postgresql",
+      "tailwindcss",
+    ],
+  },
+  {
+    id: 3,
+    title: "Rick and Morty",
+    subtitle: "Aplicación realizada con la api de Rick and Morty",
+    coverImage: "/images/RickAndMorty.png",
+    images: [
+      "/images/RickAndMorty.png",
+      "/images/RickAndMorty.png",
+      "/images/RickAndMorty.png",
+      "/images/RickAndMorty.png",
+    ],
+    technologies: [
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "redux",
+      "node-js",
+      "express-js",
+      "postgresql",
+    ],
+  }
+];
