@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion, useIsPresent } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Star from "./components/animates/backgroud/star";
 
 const variants = {
   hidden: { opacity: 0, x: -100, y: 0, scale: 0.3, rotate: 25 },
@@ -22,6 +23,13 @@ export default function TemplateRoot({ children }) {
         transition={{ duration: 0.9, type: "linear" }}
         className={`text-white grid items-center h-full`}
       >
+        <div className="grid grid-cols-3 fixed h-full w-full place-items-center -z-50">
+          {Array(9)
+            .fill()
+            .map((_, i) => (
+              <Star key={i} />
+            ))}
+        </div>
         {children}
       </motion.main>
       <motion.div

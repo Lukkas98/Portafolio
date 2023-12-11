@@ -7,6 +7,7 @@ import OverlayDiv from "../components/animates/pageProyects/overlayDiv";
 import JobWindow from "../components/animates/pageProyects/jobWindow";
 import data from "./data";
 import Link from "next/link";
+import AnimatedText from "../components/animates/animateText";
 
 export default function Proyects() {
   const [selectedId, setSelectedId] = useState(null);
@@ -31,10 +32,11 @@ export default function Proyects() {
             scale: 1.1,
           }}
         >
-          Proyectos
+          <AnimatedText text={"Proyectos"} />
         </motion.h2>
-        <Link href={"/"}>Volver</Link>
-        
+        <Link className="mt-4" href={"/"}>
+          Volver
+        </Link>
       </div>
       {selectedId && (
         <div
@@ -44,17 +46,23 @@ export default function Proyects() {
       )}
       <section className="relative flex flex-wrap justify-evenly items-center gap-10 text-xl mt-12">
         {overlaysData.map((overlay) => (
-          <motion.div key={overlay.id} layoutId={overlay.id}>
-            <div className="flex justify-between">
-              <p className="mb-4 text-lg">{overlay.title}</p>
-              <a
+          <motion.div key={overlay.id} layoutId={overlay.id} className="grid gap-4">
+            <div className="flex justify-between items-center">
+              <p className="text-lg">{overlay.title}</p>
+              <motion.a
                 className="text-base"
                 href="http://"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Repositorio"
+                whileHover={{scale:1.1}}
               >
-                linkGithub
-              </a>
+                <img
+                  src="/icons/github.svg"
+                  alt="logo Github"
+                  className="w-10 mr-5"
+                />
+              </motion.a>
             </div>
             <OverlayDiv
               setSelectedId={setSelectedId}
