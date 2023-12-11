@@ -21,7 +21,7 @@ export default function Proyects() {
 
   return (
     <section className="my-5 mx-2 relative">
-      <div className="flex relative w-[85%] mx-auto">
+      <div className="flex flex-col items-center">
         <motion.h2
           className="text-4xl h-fit w-fit bg-orange-600 rounded-3xl py-2 px-5 my-0 mx-auto"
           whileHover={{

@@ -20,7 +20,7 @@ const imagesForStack = [
   "trello",
   "webpack",
 ];
-const imagesForLearning = ["nextjs", "framer-motion", "typescript", "unity"];
+const imagesForLearning = ["nextjs", "framer-motion", "typescript"];
 
 const AboutMe = () => {
   return (
@@ -71,7 +71,6 @@ const AboutMe = () => {
             />
           </a>
           <a
-            whileHover={{ scale: 1.3, rotate: "-20deg" }}
             href="https://github.com/Lukkas98"
             target="_blank"
             rel="noopener noreferrer"
