@@ -1,13 +1,15 @@
 "use client";
+
 import { motion } from "framer-motion";
-import Image from "next/image";
 import CreateImgAnimate from "../pageAboutMe/createImgAnimation";
+import DivSwiper from "./swiper";
 
 export default function JobWindow({ selectedId, handleDeleteItem, item }) {
   const { title, images, text, technologies } = item;
+
   return (
     <motion.div
-      className="p-2 flex flex-col items-center absolute w-[80%] gap-5 bg-slate-700 bg-opacity-80 text-center rounded-3xl z-50"
+      className="p-2 flex flex-col items-center absolute -top-20 w-[85%] h-full gap-5 bg-slate-700 bg-opacity-90 text-center rounded-3xl z-50 overflow-y-auto"
       layoutId={selectedId}
       transition={{ duration: 0.5 }}
     >
@@ -24,26 +26,8 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
           <CreateImgAnimate key={i} imageName={tech} fromProyect={true} />
         ))}
       </div>
-      <Accordion images={images} />
+      <DivSwiper images={images} />
       <motion.p className="text-lg mt-3">{text}</motion.p>
     </motion.div>
   );
 }
-
-const Accordion = ({ images }) => {
-  return (
-    <div className="mx-auto flex justify-evenly w-[80%] max-w-[800px] h-fit">
-      {images.map((image, i) => (
-        <div className="w-12 h-12 relative">
-          <Image
-            className="cursor-pointer"
-            src={image}
-            alt={`logo de ${image}`}
-            fill={true}
-            key={i}
-          />
-        </div>
-      ))}
-    </div>
-  );
-};
