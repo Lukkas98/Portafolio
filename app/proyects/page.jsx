@@ -22,7 +22,7 @@ export default function Proyects() {
 
   return (
     <section className="mx-2 relative min-h-screen">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mt-5">
         <AnimatedText text={"Proyectos"} />
         <Link className="mt-4" href={"/"}>
           Volver
