@@ -9,12 +9,12 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
 
   return (
     <motion.div
-      className="p-2 flex flex-col items-center absolute -top-20 w-[85%] h-full gap-5 bg-slate-700 bg-opacity-90 text-center rounded-3xl z-50 overflow-y-auto"
+      className="p-2 flex flex-col items-center absolute -top-20 w-[85%] h-fit gap-5 bg-slate-700 bg-opacity-90 rounded-3xl z-50 overflow-y-auto"
       layoutId={selectedId}
       transition={{ duration: 0.5 }}
     >
       <motion.button
-        className="absolute left-1 top-2 py-1 px-2 font-bold text-xl border-none bg-red-600 rounded-[40px] cursor-context-menu"
+        className="sticky top-1 left-0 py-1 px-2 font-bold text-xl border-none bg-red-600 rounded-full self-start w-fit h-fit"
         whileHover={{ scale: 1.2 }}
         onTap={() => handleDeleteItem()}
       >
@@ -26,8 +26,15 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
           <CreateImgAnimate key={i} imageName={tech} fromProyect={true} />
         ))}
       </div>
-      <DivSwiper images={images} />
-      <motion.p className="text-lg mt-3">{text}</motion.p>
+      <div className="lg:hidden w-full">
+        <p>MOVIL</p>
+        <DivSwiper images={images} slidesPerView={"auto"} />
+      </div>
+      <div className="hidden lg:inline-block w-full">
+        <p>PC</p>
+        <DivSwiper images={images} slidesPerView={2} />
+      </div>
+      <motion.p className="text-lg mt-3 mx-auto w-11/12">{text}</motion.p>
     </motion.div>
   );
 }

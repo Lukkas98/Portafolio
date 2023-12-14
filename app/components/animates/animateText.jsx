@@ -18,18 +18,24 @@ const letterVariants = {
 
 const AnimatedText = ({ text }) => {
   return (
-<motion.div
-      className="flex tracking-wide"
+    <motion.h1
+      className="flex tracking-wide text-4xl h-fit w-fit bg-orange-600 rounded-3xl py-2 px-5 my-0 mx-auto"
       initial="initial"
       animate="animate"
       variants={{ animate: { transition: { staggerChildren: 0.2 } } }}
+      whileHover={{
+        color: "#18dcff",
+        textShadow: "1px 1px 1px #000",
+        backgroundColor: "#272727",
+        scale: 1.1,
+      }}
     >
       {text.split("").map((letter, index) => (
         <motion.span key={index} variants={letterVariants}>
           {letter}
         </motion.span>
       ))}
-    </motion.div>
+    </motion.h1>
   );
 };
 

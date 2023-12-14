@@ -25,6 +25,7 @@ export default function ImageSocialMedia({ images }) {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
+                title={text}
               >
                 <Image src={src} alt="contact" fill={true} />
               </motion.a>
@@ -33,7 +34,7 @@ export default function ImageSocialMedia({ images }) {
             <AnimatePresence>
               {actualKey === i && (
                 <motion.span
-                  className="pointer-events-none text-xs absolute whitespace-nowrap top-0 left-16"
+                  className="hidden lg:block pointer-events-none text-xs absolute whitespace-nowrap top-0 left-16"
                   initial={{ opacity: 0, x: -200, y: "50%" }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}

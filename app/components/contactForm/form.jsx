@@ -85,7 +85,7 @@ const Form = () => {
         }
         whileTap={{ scale: 0.9 }}
       >
-        enviar
+        {formComplete ? "Enviar" : "Formulario incompleto"}
       </motion.div>
       <AnimatePresence>
         {response && (

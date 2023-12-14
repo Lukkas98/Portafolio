@@ -21,19 +21,9 @@ export default function Proyects() {
   };
 
   return (
-    <section className="my-5 mx-2 relative">
+    <section className="mx-2 relative min-h-screen">
       <div className="flex flex-col items-center">
-        <motion.h2
-          className="text-4xl h-fit w-fit bg-orange-600 rounded-3xl py-2 px-5 my-0 mx-auto"
-          whileHover={{
-            color: "#18dcff",
-            textShadow: "1px 1px 1px #000",
-            backgroundColor: "#272727",
-            scale: 1.1,
-          }}
-        >
-          <AnimatedText text={"Proyectos"} />
-        </motion.h2>
+        <AnimatedText text={"Proyectos"} />
         <Link className="mt-4" href={"/"}>
           Volver
         </Link>
@@ -42,11 +32,15 @@ export default function Proyects() {
         <div
           className="fixed top-0 left-0 w-screen h-full bg-opacity-10 bg-black z-20"
           onClick={() => handleDeleteItem()}
-        ></div>
+        />
       )}
-      <section className="relative flex flex-wrap justify-evenly items-center gap-10 text-xl mt-12">
+      <div className="relative flex flex-wrap justify-evenly items-center gap-10 text-xl mt-12">
         {overlaysData.map((overlay) => (
-          <motion.div key={overlay.id} layoutId={overlay.id} className="grid gap-4">
+          <motion.div
+            key={overlay.id}
+            layoutId={overlay.id}
+            className="grid gap-4"
+          >
             <div className="flex justify-between items-center">
               <p className="text-lg">{overlay.title}</p>
               <motion.a
@@ -55,7 +49,7 @@ export default function Proyects() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Repositorio"
-                whileHover={{scale:1.1}}
+                whileHover={{ scale: 1.1 }}
               >
                 <img
                   src="/icons/github.svg"
@@ -81,7 +75,7 @@ export default function Proyects() {
             />
           )}
         </AnimatePresence>
-      </section>
+      </div>
     </section>
   );
 }
