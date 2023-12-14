@@ -9,7 +9,7 @@ const InputForm = ({ id, input, error, handleChange, textarea = false }) => {
         <textarea
           onChange={handleChange}
           placeholder="Escriba su mensaje"
-          className={`w-full py-2 px-4 resize-none bg-transparent outline-none border rounded-md shadow ${
+          className={`w-full py-1 px-2 resize-none bg-transparent outline-none border rounded-md shadow ${
             !error
               ? "border-orange-600 focus:border-indigo-700"
               : "border-red-600 focus:border-red-800"
@@ -26,7 +26,7 @@ const InputForm = ({ id, input, error, handleChange, textarea = false }) => {
           <input
             onChange={handleChange}
             placeholder={`ingrese su ${id === "name" ? "nombre" : "email"}`}
-            className={`w-full py-2 px-4 resize-none bg-transparent outline-none border rounded-md shadow ${
+            className={`w-full py-1 px-2 resize-none bg-transparent outline-none border-b-2 shadow ${
               !error
                 ? `focus:border-indigo-700 ${
                     input ? " border-green-800" : "border-orange-600"
@@ -42,9 +42,9 @@ const InputForm = ({ id, input, error, handleChange, textarea = false }) => {
           <AnimatePresence>
             {error && (
               <motion.span
-                initial={{ x: 50, y: "50%", opacity: 0 }}
-                animate={{ x: -30, y: "50%", opacity: 1 }}
-                exit={{ x: 50, y: "50%", opacity: 0 }}
+                initial={{ x: 50, y: "35%", opacity: 0 }}
+                animate={{ x: -30, y: "35%", opacity: 1 }}
+                exit={{ x: 50, y: "35%", opacity: 0 }}
                 className="absolute pointer-events-none"
               >
                 ❌
@@ -68,10 +68,10 @@ const InputForm = ({ id, input, error, handleChange, textarea = false }) => {
       <AnimatePresence>
         {error && (
           <motion.span
-            className="cursor-default text-red-600 text-xs absolute top-[-20px] left-0"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
+            className="cursor-default text-red-600 text-xs absolute left-0 top-0"
+            initial={{ opacity: 0, x: -20, y: !textarea ? "-50%" : "-90%" }}
+            animate={{ opacity: 1, x: 0, y: !textarea ? "-50%" : "-90%" }}
+            exit={{ opacity: 0, x: -20, y: !textarea ? "-50%" : "-90%" }}
           >
             {error}
           </motion.span>
