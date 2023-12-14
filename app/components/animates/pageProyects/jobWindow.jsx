@@ -26,12 +26,12 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
           <CreateImgAnimate key={i} imageName={tech} fromProyect={true} />
         ))}
       </div>
+      {/* movil */}
       <div className="lg:hidden w-full">
-        <p>MOVIL</p>
         <DivSwiper images={images} slidesPerView={"auto"} />
       </div>
+      {/* escritorio */}
       <div className="hidden lg:inline-block w-full">
-        <p>PC</p>
         <DivSwiper images={images} slidesPerView={2} />
       </div>
       <motion.p className="text-lg mt-3 mx-auto w-11/12">{text}</motion.p>
