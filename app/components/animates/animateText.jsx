@@ -32,7 +32,7 @@ const AnimatedText = ({ text }) => {
     >
       {text.split("").map((letter, index) => (
         <motion.span key={index} variants={letterVariants}>
-          {letter}
+          {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
     </motion.h1>

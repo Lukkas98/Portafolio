@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import Star from "./components/animates/backgroud/star";
 
 const variants = {
-  hidden: { opacity: 0, x: -100, y: 0, scale: 0.3, rotate: 25 },
-  enter: { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0 },
+  hidden: { opacity: 0, x: -100, y: 0, scale: 0.3},
+  enter: { opacity: 1, x: 0, y: 0, scale: 1},
 };
 
 export default function TemplateRoot({ children }) {
