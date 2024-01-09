@@ -23,7 +23,7 @@ export default function TemplateRoot({ children }) {
         transition={{ duration: 0.9, type: "linear" }}
         className={`text-white grid items-center h-full`}
       >
-        <div className="grid grid-cols-3 fixed h-full w-full place-items-center -z-50">
+        <div className="grid grid-cols-3 fixed top-0 left-0 h-full w-full place-items-center -z-50">
           {Array(9)
             .fill()
             .map((_, i) => (

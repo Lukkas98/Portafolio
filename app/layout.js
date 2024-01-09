@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body
-        className={`${FontGluten.className} bg-slate-800 overflow-x-hidden`}
+        className={`${FontGluten.className} bg-slate-800 overflow-x-hidden text-shadow`}
       >
         {children}
       </body>
