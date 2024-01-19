@@ -19,7 +19,7 @@ const letterVariants = {
 const AnimatedText = ({ text }) => {
   return (
     <motion.h1
-      className="flex tracking-wide text-4xl h-fit w-fit bg-orange-600 rounded-3xl py-2 px-5 my-0 mx-auto"
+      className="flex tracking-wide text-4xl h-fit w-fit bg-orange-700 rounded-3xl py-2 px-5 my-0 mx-auto"
       initial="initial"
       animate="animate"
       variants={{ animate: { transition: { staggerChildren: 0.2 } } }}

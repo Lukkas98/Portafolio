@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedText from "./components/animates/animateText";
+// import TextWrite from "./components/animates/principalPage/textWrite";
 
 const Home = () => {
-  //falta poner la sombra a tailwind
   return (
     <section className="grid grid-rows-[1fr,280px,1fr] justify-items-center items-center text-white h-screen w-screen overflow-hidden md:grid-cols-2 md:grid-rows-2 md:place-items-center">
       <div className=" text-center my-5">
-        <h1 className="text-5xl h-fit bg-orange-800 rounded-[2.5rem] py-2 px-3 mx-5 font-normal shadow-lg">
-          Lucas Palma
-        </h1>
-        <p className="text-4xl mt-8 mx-5">Desarrollador web frontend</p>
+          <AnimatedText text={"Lucas Palma"} />
+        <div className="text-3xl mt-8 mx-5">
+          Desarrollador Web Frontend
+        </div>
       </div>
       <div className="relative grid justify-items-center gap-3">
         <div className="filter-shadow-orange relative w-60 h-60">
@@ -28,7 +29,7 @@ const Home = () => {
           Descargar CV
         </a>
       </div>
-      <div className="grid grid-cols-3 md:col-span-2 gap-5 justify-items-center items-center h-16 my-[15%] text-lg">
+      <div className="grid grid-cols-3 md:col-span-2 justify-around h-16 my-[15%] text-lg text-center">
         <Link href={"/proyects"}>Proyectos</Link>
         <Link href={"/contact"}>Contacto</Link>
         <Link href={"/aboutMe"}>Acerca de Mí</Link>
