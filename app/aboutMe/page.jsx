@@ -2,6 +2,7 @@ import Image from "next/image";
 import CreateImgAnimate from "../components/animates/pageAboutMe/createImgAnimation";
 import Link from "next/link";
 import AnimatedText from "../components/animates/animateText";
+import PerfilImage, { ImageExtra } from "../components/aboutMe/perfilImage";
 
 const imagesForStack = [
   "html",
@@ -30,12 +31,12 @@ const socialMedia = [
 
 const AboutMe = () => {
   return (
-    <section className="grid justify-items-center items-center w-full gap-5">
-      <div className="relative mt-5 gap-5 flex flex-col items-center">
+    <section className="grid justify-items-center items-center w-full gap-5 md:grid-cols-2 max-w-5xl mx-auto">
+      <div className="relative mt-5 gap-5 flex flex-col items-center md:col-span-2">
         <AnimatedText text={"Sobre Mí"} />
         <Link href={"/"}>Volver</Link>
       </div>
-      <div className="outline-1 outline outline-orange-600 bg-transparent my-0 mx-auto rounded-[2rem] py-5 px-6 transition-all duration-500 w-[95%] max-w-[800px]">
+      <div className="outline-1 outline outline-orange-600 bg-transparent my-0 mx-auto rounded-[2rem] py-5 px-6 transition-all duration-500 w-[95%] max-w-[800px] md:mt-7 md:relative md:w-[25rem] left-10">
         <p>
           Hola, me llamo Lucas, tengo 25 años, vivo en Buenos Aires, Argentina.
           Desde pequeño siempre estuve interesado en todo este mundo de la
@@ -43,43 +44,15 @@ const AboutMe = () => {
         </p>
       </div>
 
-      <div className="relative grid grid-cols-2 place-items-center">
-        <div className="grid grid-cols-2 gap-4">
-          <Image
-            className="col-span-2 relative -top-6"
-            src="/icons/pcIcon.svg"
-            width={90}
-            height={90}
-            alt="tegnology"
-          />
-          {socialMedia.map((social, i) => (
-            <a
-              key={i}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative h-10 w-10 hover:scale-125 hover:rotate-[20deg] transition-all duration-300"
-            >
-              <Image
-                src={`/icons/${social.name}.svg`}
-                fill={true}
-                alt="contact"
-                title={social.name}
-              />
-            </a>
-          ))}
-        </div>
-        <div className="relative w-44 h-44">
-          <Image
-            src="/foto.jpg"
-            alt="perfil"
-            fill={true}
-            className="rounded-tl-[66%] rounded-tr-[45%] rounded-bl-[40%] rounded-br-[70%] drop-shadow-[4px_2px_3px_rgba(200,100,0)]"
-          />
-        </div>
+      <PerfilImage socialMedia={socialMedia} />
+
+      <div className="col-[1/2] md:flex relative hidden h-[60%] md:gap-10">
+        {socialMedia.map((social, i) => (
+          <ImageExtra social={social} i={i} notFlex={true} key={i} />
+        ))}
       </div>
 
-      <div className="outline-1 outline outline-orange-600 bg-transparent my-0 mx-auto rounded-[2rem] py-5 px-6 transition-all duration-500 w-[95%] max-w-[800px]">
+      <div className="outline-1 outline outline-orange-600 bg-transparent my-0 mx-auto rounded-[2rem] py-5 px-6 transition-all duration-500 w-[95%] max-w-[800px] md:relative md:col-[2/3] md:right-20 md:w-[400px]">
         <p>
           Me encantan los videojuegos y el desarrollo web, actualmente estoy en
           busca de mi primer empleo en la industria IT, ansioso de demostrar
@@ -88,7 +61,7 @@ const AboutMe = () => {
         <p>Que tengas un lindo día 😁</p>
       </div>
 
-      <div className="outline-1 outline outline-orange-600 w-[90%] h-fit bg-transparent shadow-md my-5 mx-auto rounded-3xl py-5 px-4 text-center transition-all duration-500">
+      <div className="outline-1 outline outline-orange-600 w-[90%] h-fit bg-transparent shadow-md my-5 mx-auto rounded-3xl py-5 px-4 text-center transition-all duration-500 md:col-span-2 md:flex gap-20 md:justify-center md:p-5">
         <div>
           <p>Stack de tecnologías y herramientas</p>
           <div className="flex justify-around gap-7 flex-wrap my-5 mx-0">
@@ -107,7 +80,7 @@ const AboutMe = () => {
         </div>
       </div>
 
-      <div className="outline-1 outline outline-orange-600 w-[90%] h-fit bg-transparent my-3 mx-auto rounded-3xl py-5 px-4 text-center">
+      {/* <div className="outline-1 outline outline-orange-600 w-[90%] h-fit bg-transparent my-3 mx-auto rounded-3xl py-5 px-4 text-center">
         <h5>Certificados</h5>
         <div className="flex justify-around items-center">
           <div className="h-[60px] w-[100px] bg-slate-400" />
@@ -118,7 +91,7 @@ const AboutMe = () => {
             </a>
           </h6>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
