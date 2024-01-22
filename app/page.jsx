@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "./components/animates/animateText";
+import ButtonAnimate from "./components/animates/buttonAnimate";
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       <div className=" text-center my-5">
           <AnimatedText text={"Lucas Palma"} />
         <div className="text-3xl mt-8 mx-5">
-          Desarrollador Web Frontend
+          Desarrollador Web FullStack
         </div>
       </div>
       <div className="relative grid justify-items-center gap-3">
@@ -28,10 +29,10 @@ const Home = () => {
           Descargar CV
         </a>
       </div>
-      <div className="grid grid-cols-3 md:col-span-2 justify-around h-16 my-[15%] text-lg text-center">
-        <Link href={"/proyects"}>Proyectos</Link>
-        <Link href={"/contact"}>Contacto</Link>
-        <Link href={"/aboutMe"}>Acerca de Mí</Link>
+      <div className="grid grid-cols-3 md:col-span-2 gap-5 justify-around h-12 my-[15%] text-lg text-center">
+        <ButtonAnimate href="/proyects" text="Proyectos" />
+        <ButtonAnimate href="/contact" text="Contacto" />
+        <ButtonAnimate href="/aboutMe" text="Acerca de Mí" />
       </div>
     </section>
   );
