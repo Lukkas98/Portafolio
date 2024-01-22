@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "./components/animates/animateText";
-// import TextWrite from "./components/animates/principalPage/textWrite";
 
 const Home = () => {
   return (

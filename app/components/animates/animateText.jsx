@@ -7,7 +7,8 @@ const letterVariants = {
     y: 0,
   },
   animate: {
-    y: [-2, 2],
+    opacity: [0.7, 1],
+    y: [2, -2],
     transition: {
       duration: 0.3,
       repeat: Infinity,
