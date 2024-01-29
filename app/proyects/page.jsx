@@ -45,7 +45,7 @@ export default function Proyects() {
               <p className="text-lg">{overlay.title}</p>
               <motion.a
                 className="text-base"
-                href="http://"
+                href={overlay.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Repositorio"

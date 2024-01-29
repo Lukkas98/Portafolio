@@ -5,7 +5,7 @@ import CreateImgAnimate from "../pageAboutMe/createImgAnimation";
 import DivSwiper from "./swiper";
 
 export default function JobWindow({ selectedId, handleDeleteItem, item }) {
-  const { title, images, text, technologies } = item;
+  const { title, images, text, technologies, github } = item;
 
   return (
     <motion.div
