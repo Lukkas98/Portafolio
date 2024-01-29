@@ -34,10 +34,10 @@ export default function ImageSocialMedia({ images }) {
             <AnimatePresence>
               {actualKey === i && (
                 <motion.span
-                  className="hidden lg:block pointer-events-none text-xs absolute whitespace-nowrap top-0 left-16"
-                  initial={{ opacity: 0, x: -200, y: "50%" }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
+                  className="hidden lg:block pointer-events-none text-xs absolute whitespace-nowrap -top-5 left-16"
+                  initial={{ opacity: 0, y: -200, x:"50%" }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -100 }}
                 >
                   {text}
                 </motion.span>
