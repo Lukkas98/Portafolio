@@ -7,7 +7,7 @@ const Home = () => {
     <section className="grid grid-rows-[1fr,280px,1fr] justify-items-center items-center text-white h-screen w-screen overflow-hidden md:grid-cols-2 md:grid-rows-2 md:place-items-center max-w-5xl mx-auto">
       <div className=" text-center my-5">
           <AnimatedText text={"Lucas Palma"} />
-        <div className="text-3xl mt-8 mx-5 lg:text-5xl">
+        <div className="text-3xl mt-8 mx-5 lg:text-5xl relative transition-all duration-500 hover:text-orange-500 hover:scale-105">
           Desarrollador Web FullStack
         </div>
       </div>
