@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CreateImgAnimate from "../components/animates/pageAboutMe/createImgAnimation";
 import Link from "next/link";
 import AnimatedText from "../components/animates/animateText";
@@ -31,7 +30,7 @@ const socialMedia = [
 
 const AboutMe = () => {
   return (
-    <section className="grid justify-items-center items-center w-full gap-5 md:grid-cols-2 max-w-5xl mx-auto">
+    <section className="grid my-5 justify-items-center items-center w-full gap-5 md:grid-cols-2 max-w-5xl mx-auto">
       <div className="relative mt-5 gap-5 flex flex-col items-center md:col-span-2">
         <AnimatedText text={"Sobre Mí"} />
         <Link href={"/"}>Volver</Link>
@@ -41,6 +40,10 @@ const AboutMe = () => {
           Hola, me llamo Lucas, tengo 25 años, vivo en Buenos Aires, Argentina.
           Desde pequeño siempre estuve interesado en todo este mundo de la
           programación y la tecnología.
+        </p>
+        <br />
+        <p>
+          Este portafolio lo realizé enteramente con Next.js y Framer-Motion para las animaciones 😎
         </p>
       </div>
 

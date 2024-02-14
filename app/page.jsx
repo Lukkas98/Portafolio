@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import AnimatedText from "./components/animates/animateText";
 import ButtonAnimate from "./components/animates/buttonAnimate";
 

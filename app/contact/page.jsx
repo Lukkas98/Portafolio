@@ -23,7 +23,7 @@ const images = [
 
 export default function Contact() {
   return (
-    <section>
+    <section className="my-5">
       <div className="grid justify-items-center m-4 gap-3">
         <AnimatedText text={"Contacto"} />
         <Link href={"/"}>Volver</Link>
