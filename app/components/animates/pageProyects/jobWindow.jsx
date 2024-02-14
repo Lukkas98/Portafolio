@@ -9,7 +9,7 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
 
   return (
     <motion.div
-      className="p-2 flex flex-col items-center absolute -top-20 w-[85%] h-fit gap-5 bg-slate-700 bg-opacity-90 rounded-3xl z-50 overflow-y-auto"
+      className="px-2 py-4 flex flex-col items-center absolute -top-20 w-[85%] h-fit gap-5 bg-slate-700 bg-opacity-90 rounded-3xl z-50 overflow-y-auto max-h-[80%] overscroll-y-contain"
       layoutId={selectedId}
       transition={{ duration: 0.5 }}
     >
@@ -34,7 +34,7 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
       <div className="hidden lg:inline-block w-full">
         <DivSwiper images={images} slidesPerView={2} />
       </div>
-      <motion.p className="text-lg mt-3 mx-auto w-11/12">{text}</motion.p>
+      <motion.div className="text-lg mt-3 mx-auto w-11/12">{text}</motion.div>
     </motion.div>
   );
 }
