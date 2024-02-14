@@ -9,7 +9,7 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
 
   return (
     <motion.div
-      className="px-2 py-4 flex flex-col items-center absolute -top-20 w-[85%] h-fit gap-5 bg-slate-700 bg-opacity-90 rounded-3xl z-50 overflow-y-auto max-h-[80%] overscroll-y-contain"
+      className="px-2 py-4 flex flex-col items-center absolute -top-20 w-[85%] h-fit gap-5 bg-slate-700 bg-opacity-90 rounded-3xl z-50 overflow-y-auto max-h-[80%] md:max-h-[95%] overscroll-y-contain"
       layoutId={selectedId}
       transition={{ duration: 0.5 }}
     >

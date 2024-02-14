@@ -34,7 +34,7 @@ export default function Proyects() {
           onClick={() => handleDeleteItem()}
         />
       )}
-      <div className="relative flex flex-wrap justify-evenly items-center gap-10 text-xl mt-12">
+      <div className="relative flex flex-wrap justify-evenly items-start gap-10 text-xl mt-12 lg:h-[550px]">
         {overlaysData.map((overlay) => (
           <motion.div
             key={overlay.id}
