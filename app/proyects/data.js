@@ -107,7 +107,7 @@ export default [
     title: "Memory Game",
     subtitle: "Juego de memoria en HTML5",
     coverImage: "/images/MemoryGame/1.png",
-    github: "https://github.com/Lukkas98",
+    github: "https://github.com/Lukkas98/Memory-Game",
     images: [
       "/images/MemoryGame/1.png",
       "/images/MemoryGame/2.png",
@@ -128,7 +128,7 @@ export default [
     title: "Color Game",
     subtitle: "Juego simple hecho en HTML5",
     coverImage: "/images/ColorGame/1.png",
-    github: "https://github.com/Lukkas98",
+    github: "https://github.com/Lukkas98/Color-Game",
     images: [
       "/images/ColorGame/1.png",
       "/images/ColorGame/2.png",
