@@ -8,6 +8,8 @@ import JobWindow from "../components/animates/pageProyects/jobWindow";
 import data from "./data";
 import Link from "next/link";
 import AnimatedText from "../components/animates/animateText";
+import Image from "next/image";
+import PageTransition from "../components/animates/pageTransition";
 
 export default function Proyects() {
   const [selectedId, setSelectedId] = useState(null);
@@ -51,10 +53,12 @@ export default function Proyects() {
                 title="Repositorio"
                 whileHover={{ scale: 1.1 }}
               >
-                <img
+                <Image
                   src="/icons/github.svg"
                   alt="logo Github"
-                  className="w-10 mr-5"
+                  className="mr-5"
+                  width={40}
+                  height={40}
                 />
               </motion.a>
             </div>
@@ -76,6 +80,7 @@ export default function Proyects() {
           )}
         </AnimatePresence>
       </div>
+      <PageTransition />
     </section>
   );
 }

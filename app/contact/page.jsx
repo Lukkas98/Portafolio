@@ -2,6 +2,7 @@ import Link from "next/link";
 import Form from "../components/contactForm/form";
 import ImageSocialMedia from "../components/contactForm/imagesSocialMedia";
 import AnimatedText from "../components/animates/animateText";
+import PageTransition from "../components/animates/pageTransition";
 
 const images = [
   {
@@ -32,6 +33,7 @@ export default function Contact() {
         <ImageSocialMedia images={images} />
         <Form />
       </div>
+      <PageTransition />
     </section>
   );
 }

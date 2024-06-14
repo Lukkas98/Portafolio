@@ -2,6 +2,7 @@ import CreateImgAnimate from "../components/animates/pageAboutMe/createImgAnimat
 import Link from "next/link";
 import AnimatedText from "../components/animates/animateText";
 import PerfilImage, { ImageExtra } from "../components/aboutMe/perfilImage";
+import PageTransition from "../components/animates/pageTransition";
 
 const imagesForStack = [
   "html",
@@ -95,6 +96,7 @@ const AboutMe = () => {
           </h6>
         </div>
       </div> */}
+      <PageTransition />
     </section>
   );
 };

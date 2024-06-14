@@ -4,6 +4,16 @@
 
 @layer utilities {
   .filter-shadow-orange {
-    filter: drop-shadow(3px 2px 3px rgb(200 100 0));
+    filter: drop-shadow(4px 2px 15px rgb(200 100 0));
   }
+}
+
+.privacy-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b14207e8;
+  z-index: 2;
 }

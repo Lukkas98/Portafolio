@@ -1,10 +1,11 @@
 import Image from "next/image";
 import AnimatedText from "./components/animates/animateText";
 import ButtonAnimate from "./components/animates/buttonAnimate";
+import PageTransition from "./components/animates/pageTransition";
 
 const Home = () => {
   return (
-    <section className="grid grid-rows-[1fr,280px,1fr] justify-items-center items-center text-white h-screen w-screen overflow-hidden md:grid-cols-2 md:grid-rows-2 md:place-items-center max-w-5xl mx-auto">
+    <section className="grid grid-rows-[1fr,280px,1fr] justify-items-center items-center text-white h-screen w-screen md:grid-cols-2 md:grid-rows-2 md:place-items-center max-w-5xl mx-auto">
       <div className=" text-center my-5">
           <AnimatedText text={"Lucas Palma"} />
         <div className="text-3xl mt-8 mx-5 lg:text-5xl relative transition-all duration-500 hover:text-orange-500 hover:scale-105">
@@ -33,6 +34,7 @@ const Home = () => {
         <ButtonAnimate href="/contact" text="Contacto" />
         <ButtonAnimate href="/aboutMe" text="Acerca de Mí" />
       </div>
+      <PageTransition />
     </section>
   );
 };
