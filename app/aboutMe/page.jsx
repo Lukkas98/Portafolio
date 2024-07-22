@@ -22,8 +22,9 @@ const imagesForStack = [
   "trello",
   "webpack",
   "framer-motion",
+  "nextjs",
 ];
-const imagesForLearning = ["nextjs", "typescript"];
+const imagesForLearning = ["typescript"];
 const socialMedia = [
   { name: "linkedin", link: "https://www.linkedin.com/in/lucaspalma98/" },
   { name: "github", link: "https://github.com/Lukkas98" },
@@ -38,13 +39,14 @@ const AboutMe = () => {
       </div>
       <div className="outline-1 outline outline-orange-600 bg-transparent my-0 mx-auto rounded-[2rem] py-5 px-6 transition-all duration-500 w-[95%] max-w-[800px] md:mt-7 md:relative md:w-[25rem] left-10">
         <p>
-          Hola, me llamo Lucas, tengo 25 años, vivo en Buenos Aires, Argentina.
+          Hola, me llamo Lucas, tengo 26 años, vivo en Buenos Aires, Argentina.
           Desde pequeño siempre estuve interesado en todo este mundo de la
           programación y la tecnología.
         </p>
         <br />
         <p>
-          Este portafolio lo realizé enteramente con Next.js y Framer-Motion para las animaciones 😎
+          Este portafolio lo realizé enteramente con Next.js y Framer-Motion
+          para las animaciones 😎
         </p>
       </div>
 

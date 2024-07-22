@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import InputForm from "./inputForm";
 import { useEffect, useState } from "react";
 import validate from "./validate";
+import sendEmail from "./sendEmail";
 
 const Form = () => {
   const [inputs, setInputs] = useState({ name: "", email: "", message: "" });
@@ -93,9 +94,9 @@ const Form = () => {
             initial={{ y: "-400%", x: "-50%", opacity: 0, scale: 0 }}
             animate={{ y: -200, x: "-50%", opacity: 1, scale: 1 }}
             exit={{ y: "-400%", x: "-50%", opacity: 0, scale: 0 }}
-            className="absolute top-64 left-1/2 bg-orange-200 py-2 px-5 rounded-lg text-red-700 font-bold shadow-md text-center"
+            className={`${response.success ? "bg-blue-500 text-blue-50" : "bg-red-500 text-red-50" } fixed top-[50%] left-1/2 py-2 px-5 rounded-lg font-bold text-center shadow-black shadow-md`}
           >
-            {response}
+            {response.success ?? response.error} 
           </motion.div>
         )}
       </AnimatePresence>
