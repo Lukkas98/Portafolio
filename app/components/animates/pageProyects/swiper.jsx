@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import Image from 'next/image'
 import "swiper/css/bundle";
 import "swiper/css/effect-coverflow";
 
@@ -24,7 +25,9 @@ const DivSwiper = ({ images, slidesPerView}) => {
     >
       {images.map((image, key) => (
         <SwiperSlide key={key} virtualIndex={key}>
-          <img src={image} alt="imgof" className="rounded-lg" />
+          <div className="relative aspect-video">
+            <Image src={image} alt="imgof" fill={true} className="rounded-lg" />
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>

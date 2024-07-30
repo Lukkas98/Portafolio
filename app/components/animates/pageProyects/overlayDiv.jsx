@@ -15,7 +15,7 @@ export default function OverlayDiv({ overlay, setSelectedId, setItem }) {
     } else {
       controls.start({ height: "0%", opacity: 0, pointerEvents: "none" });
     }
-  }, [isHoveredId]);
+  }, [controls, isHoveredId]);
 
   return (
     <motion.div
