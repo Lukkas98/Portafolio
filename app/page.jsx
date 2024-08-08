@@ -1,13 +1,13 @@
-import Image from "next/image";
-import AnimatedText from "./components/animates/animateText";
-import ButtonAnimate from "./components/animates/buttonAnimate";
-import PageTransition from "./components/animates/pageTransition";
+import Image from 'next/image';
+import AnimatedText from '../components/animateText';
+import ButtonAnimate from '../components/buttonAnimate';
+import PageTransition from '../components/pageTransition';
 
 const Home = () => {
   return (
     <section className="grid grid-rows-[1fr,280px,1fr] justify-items-center items-center text-white h-screen w-screen md:grid-cols-2 md:grid-rows-2 md:place-items-center max-w-5xl mx-auto">
       <div className=" text-center my-5">
-          <AnimatedText text={"Lucas Palma"} />
+        <AnimatedText text={'Lucas Palma'} />
         <div className="text-3xl mt-8 mx-5 lg:text-5xl relative transition-all duration-500 hover:text-orange-500 hover:scale-105">
           Desarrollador Web FullStack
         </div>
@@ -23,7 +23,7 @@ const Home = () => {
         </div>
         <a
           className=" text-2xl lg:text-3xl lg:mt-5 inline-block transition-all duration-300 hover:scale-125 text-orange-600"
-          href={"/Lucas Palma CV.pdf"}
+          href={'/Lucas Palma CV.pdf'}
           target="_blank"
         >
           Descargar CV

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import CreateImgAnimate from "../pageAboutMe/createImgAnimation";
-import DivSwiper from "./swiper";
+import { motion } from 'framer-motion';
+import DivSwiper from './swiper';
+import CreateImgAnimate from '@/app/aboutMe/components/createImgAnimation';
 
 export default function JobWindow({ selectedId, handleDeleteItem, item }) {
   const { title, images, text, technologies, github } = item;
@@ -28,7 +28,7 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
       </div>
       {/* movil */}
       <div className="lg:hidden w-full">
-        <DivSwiper images={images} slidesPerView={"auto"} />
+        <DivSwiper images={images} slidesPerView={'auto'} />
       </div>
       {/* escritorio */}
       <div className="hidden lg:inline-block w-full">

@@ -1,15 +1,13 @@
-"use client";
-
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-
-import OverlayDiv from "../components/animates/pageProyects/overlayDiv";
-import JobWindow from "../components/animates/pageProyects/jobWindow";
-import data from "./data";
-import Link from "next/link";
-import AnimatedText from "../components/animates/animateText";
-import Image from "next/image";
-import PageTransition from "../components/animates/pageTransition";
+'use client';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import OverlayDiv from './components/overlayDiv';
+import JobWindow from './components/jobWindow';
+import data from './data';
+import Link from 'next/link';
+import Image from 'next/image';
+import PageTransition from '@/components/pageTransition';
+import AnimatedText from '@/components/animateText';
 
 export default function Proyects() {
   const [selectedId, setSelectedId] = useState(null);
@@ -25,8 +23,8 @@ export default function Proyects() {
   return (
     <section className="mx-2 relative min-h-screen my-5">
       <div className="flex flex-col items-center mt-5">
-        <AnimatedText text={"Proyectos"} />
-        <Link className="mt-4" href={"/"}>
+        <AnimatedText text={'Proyectos'} />
+        <Link className="mt-4" href={'/'}>
           Volver
         </Link>
       </div>
@@ -38,11 +36,7 @@ export default function Proyects() {
       )}
       <div className="relative flex flex-wrap justify-evenly items-start gap-10 text-xl mt-12 lg:h-[550px]">
         {overlaysData.map((overlay) => (
-          <motion.div
-            key={overlay.id}
-            layoutId={overlay.id}
-            className="grid gap-4"
-          >
+          <motion.div key={overlay.id} layoutId={overlay.id} className="grid gap-4">
             <div className="flex justify-between items-center">
               <p className="text-lg">{overlay.title}</p>
               <motion.a
@@ -62,21 +56,13 @@ export default function Proyects() {
                 />
               </motion.a>
             </div>
-            <OverlayDiv
-              setSelectedId={setSelectedId}
-              setItem={setItem}
-              overlay={overlay}
-            />
+            <OverlayDiv setSelectedId={setSelectedId} setItem={setItem} overlay={overlay} />
           </motion.div>
         ))}
 
         <AnimatePresence>
           {selectedId && (
-            <JobWindow
-              selectedId={selectedId}
-              handleDeleteItem={handleDeleteItem}
-              item={item}
-            />
+            <JobWindow selectedId={selectedId} handleDeleteItem={handleDeleteItem} item={item} />
           )}
         </AnimatePresence>
       </div>

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 //   objSrc = "/_next/static/media/example.123abc.svg",
-export default function CreateImgAnimate({ objSrc, fromProyect = false }) {
+export default function CreateImgAnimate({ objSrc }) {
   const [isHover, setIsHover] = useState(false);
   const controls = useAnimation();
 
@@ -32,15 +32,15 @@ export default function CreateImgAnimate({ objSrc, fromProyect = false }) {
       onHoverEnd={() => setIsHover(false)}
       animate={controls}
     >
-      <div className={`relative ${fromProyect ? 'w-7 h-7' : 'w-11 h-11'}`}>
-        <Image src={objSrc} alt={`${text} logo`} fill={true} sizes="28px, 44px" />
+      <div className={`relative w-8 h-8`}>
+        <Image src={objSrc} alt={`${text} logo`} fill={true} sizes="40px" />
       </div>
       <AnimatePresence>
         {isHover && (
           <motion.span
-            initial={{ opacity: 0, y: -30, x: '-50%' }}
-            animate={{ opacity: 1, y: 15 }}
-            exit={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: -50, x: '-50%' }}
+            animate={{ opacity: 1, y: 5 }}
+            exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.3 }}
             className="absolute top-[-70%] whitespace-nowrap z-50 text-xs capitalize font-bold text-orange-500 pointer-events-none"
           >

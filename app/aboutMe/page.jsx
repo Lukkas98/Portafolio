@@ -1,8 +1,8 @@
-import CreateImgAnimate from '../components/animates/pageAboutMe/createImgAnimation';
+import CreateImgAnimate from './components/createImgAnimation';
 import Link from 'next/link';
-import AnimatedText from '../components/animates/animateText';
-import PerfilImage from '../components/aboutMe/perfilImage';
-import PageTransition from '../components/animates/pageTransition';
+import PerfilImage from './components/perfilImage';
+import PageTransition from '@/components/pageTransition';
+import AnimatedText from '@/components/animateText';
 import {
   html,
   css,
