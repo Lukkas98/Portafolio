@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import DivSwiper from './swiper';
-import CreateImgAnimate from '@/app/aboutMe/components/createImgAnimation';
+import { motion } from "framer-motion";
+import DivSwiper from "./swiper";
+import AnimationIcons from "./animationIcons";
 
 export default function JobWindow({ selectedId, handleDeleteItem, item }) {
   const { title, images, text, technologies, github } = item;
@@ -13,22 +13,22 @@ export default function JobWindow({ selectedId, handleDeleteItem, item }) {
       layoutId={selectedId}
       transition={{ duration: 0.5 }}
     >
-      <motion.button
-        className="sticky top-1 left-0 py-1 px-2 font-bold text-xl border-none bg-red-600 rounded-full self-start w-fit h-fit"
+      <motion.div
+        className="relative w-fit text-red-800 text-xl font-bold border-none cursor-pointer"
         whileHover={{ scale: 1.2 }}
         onTap={() => handleDeleteItem()}
       >
         X
-      </motion.button>
+      </motion.div>
       <motion.h5 className="text-3xl mt-3">{title}</motion.h5>
       <div className="flex flex-wrap justify-center gap-4 w-[90%] gap-y-6">
         {technologies.map((tech, i) => (
-          <CreateImgAnimate key={i} imageName={tech} fromProyect={true} />
+          <AnimationIcons key={i} objSrc={tech} />
         ))}
       </div>
       {/* movil */}
       <div className="lg:hidden w-full">
-        <DivSwiper images={images} slidesPerView={'auto'} />
+        <DivSwiper images={images} slidesPerView={"auto"} />
       </div>
       {/* escritorio */}
       <div className="hidden lg:inline-block w-full">

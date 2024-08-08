@@ -22,12 +22,10 @@ export default function OverlayDiv({ overlay, setSelectedId, setItem }) {
       className="relative rounded-3xl shadow-lg h-fit w-full border border-black"
       onMouseEnter={() => setIsHoveredId(overlay.id)}
       onMouseLeave={() => setIsHoveredId(null)}
-      whileHover={{scale:1.1}}
+      whileHover={{ scale: 1.1 }}
     >
       <Image
-        className={`rounded-3xl ${
-          isHoveredId === overlay.id ? "blur-sm" : "blur-none"
-        }`}
+        className={`rounded-3xl ${isHoveredId === overlay.id ? "blur-sm" : "blur-none"}`}
         src={overlay.coverImage}
         alt="job Image"
         width={300}

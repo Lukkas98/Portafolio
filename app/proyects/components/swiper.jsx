@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import Image from 'next/image'
+import Image from "next/image";
 import "swiper/css/bundle";
 import "swiper/css/effect-coverflow";
 
-const DivSwiper = ({ images, slidesPerView}) => {
+const DivSwiper = ({ images, slidesPerView }) => {
   return (
     <Swiper
       className="max-h-[30rem] min-h-[10rem] max-w-full m-10"
