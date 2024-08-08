@@ -1,3 +1,15 @@
+import {
+  html,
+  css,
+  javascript,
+  node,
+  postgresql,
+  express,
+  tailwind,
+  react,
+  redux,
+} from "@lukkas98/icons";
+
 /* eslint import/no-anonymous-default-export: [2, {"allowArray": true}] */
 export default [
   {
@@ -7,24 +19,13 @@ export default [
     coverImage: "/images/PI/1.png",
     github: "https://github.com/Lukkas98/Videogames-PI",
     images: ["/images/PI/1.png", "/images/PI/2.png", "/images/PI/3.png"],
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "react",
-      "redux",
-      "node-js",
-      "express-js",
-      "postgresql",
-    ],
+    technologies: [html, css, javascript, react, redux, node, express, postgresql],
     text: (
-      <p>
-        En un lapso de dos semanas, desarrollé esta aplicación, que fue el
-        primer proyecto de Henry. Esta aplicación consume una API externa.
-        Incorpora ordenamientos combinados, paginado dinámico y la capacidad de
-        buscar cualquier videojuego. Utiliza una base de datos interna que
-        permite la creación de nuevos juegos a través de un formulario
-        específico.
+      <p className=" bg-slate-800 px-4 py-2 rounded-lg">
+        En un lapso de dos semanas, desarrollé esta aplicación, que fue el primer proyecto de Henry.
+        Esta aplicación consume una API externa. Incorpora ordenamientos combinados, paginado
+        dinámico y la capacidad de buscar cualquier videojuego. Utiliza una base de datos interna
+        que permite la creación de nuevos juegos a través de un formulario específico.
       </p>
     ),
   },
@@ -40,37 +41,26 @@ export default [
       "/images/ProgramaRed/3.png",
       "/images/ProgramaRed/4.png",
     ],
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "react",
-      "redux",
-      "node-js",
-      "express-js",
-      "postgresql",
-      "tailwindcss",
-    ],
+    technologies: [html, css, javascript, react, redux, node, express, postgresql, tailwind],
     text: (
-      <>
+      <div className=" bg-slate-800 px-4 py-2 rounded-lg">
         <p>
-          Bienvenido al proyecto final de Henry, donde yo más un equipo de cinco
-          personas nos unimos para desarrollar una red social completamente en
-          español. Hemos optimizado la experiencia de usuario para facilitar la
-          creación de publicaciones y el intercambio de código e ideas. también,
-          tendrás la capacidad de marcar publicaciones como favoritas. Para una
-          experiencia más avanzada, ofrecemos una membresía premium que incluye
-          un logo exclusivo y la funcionalidad de subir videos.{" "}
+          Bienvenido al proyecto final de Henry, donde yo más un equipo de cinco personas nos unimos
+          para desarrollar una red social completamente en español. Hemos optimizado la experiencia
+          de usuario para facilitar la creación de publicaciones y el intercambio de código e ideas.
+          también, tendrás la capacidad de marcar publicaciones como favoritas. Para una experiencia
+          más avanzada, ofrecemos una membresía premium que incluye un logo exclusivo y la
+          funcionalidad de subir videos.
+          <br />
           <i>Estas son las implementaciones que posee la aplicación:</i>
         </p>
         <br />
         <p>
-          Autenticación de terceros, Pasarela de pagos, Filtros combinados,
-          Subida de archivos (utilizando Firebase), Uso de local storage,
-          Sistema de puntuación, Panel de administración, Notificaciones por
-          email, Borrado lógico.
+          Autenticación de terceros, Pasarela de pagos, Filtros combinados, Subida de archivos
+          (utilizando Firebase), Uso de local storage, Sistema de puntuación, Panel de
+          administración, Notificaciones por email, Borrado lógico.
         </p>
-      </>
+      </div>
     ),
   },
   {
@@ -85,21 +75,11 @@ export default [
       "/images/RickAndMorty/3.png",
       "/images/RickAndMorty/4.png",
     ],
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "react",
-      "redux",
-      "node-js",
-      "express-js",
-      "postgresql",
-    ],
+    technologies: [html, css, javascript, react, redux, node, express, postgresql],
     text: (
-      <p>
-        Esta aplicación fue realizada durante el curso de Henry, puedes buscar y
-        guardar como favoritos a los personajes de la serie Rick and Morty.
-        posee filtros combinados y un login
+      <p className=" bg-slate-800 px-4 py-2 rounded-lg">
+        Esta aplicación fue realizada durante el curso de Henry, puedes buscar y guardar como
+        favoritos a los personajes de la serie Rick and Morty. posee filtros combinados y un login
       </p>
     ),
   },
@@ -115,12 +95,12 @@ export default [
       "/images/MemoryGame/3.png",
       "/images/MemoryGame/4.png",
     ],
-    technologies: ["html", "css", "javascript"],
+    technologies: [html, css, javascript],
     text: (
-      <p>
-        Juego hecho con HTML, css y javascript puro, me enfrente a varios
-        problemas al desarrollarlo, el juego tiene un cronometro y un contador
-        de puntos conforme vayan pasando niveles se agregan nuevas cartas
+      <p className=" bg-slate-800 px-4 py-2 rounded-lg">
+        Juego hecho con HTML, css y javascript puro, me enfrente a varios problemas al
+        desarrollarlo, el juego tiene un cronometro y un contador de puntos conforme vayan pasando
+        niveles se agregan nuevas cartas
       </p>
     ),
   },
@@ -136,12 +116,13 @@ export default [
       "/images/ColorGame/3.png",
       "/images/ColorGame/4.png",
     ],
-    technologies: ["html", "css", "javascript"],
+    technologies: [html, css, javascript],
     text: (
-      <p>
-        Juego hecho con HTML, css y javascript puro, consiste en un gameplay
-        sencillo donde se presenta un color en RGB y el usuario debe seleccionar
-        el correcto. hay 2 dificultades, fácil con 3 colores y difícil con 6
+      <p className=" bg-slate-800 px-4 py-2 rounded-lg">
+        Juego hecho con HTML, css y javascript puro.
+        <br />
+        Consiste en un gameplay sencillo donde se presenta un color en RGB y el usuario debe
+        seleccionar el correcto. hay 2 dificultades, fácil con 3 colores y difícil con 6
       </p>
     ),
   },
