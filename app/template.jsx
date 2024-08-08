@@ -1,20 +1,15 @@
-"use client";
-import { AnimatePresence } from "framer-motion";
-import Star from "./components/animates/backgroud/star";
+import dynamic from "next/dynamic";
+import AnimatedBg from "./components/animates/backgroud/animatedBg";
+
+const AnimateBg = dynamic(() => AnimatedBg, { ssr: false })
 
 export default function TemplateRoot({ children }) {
   return (
-    <AnimatePresence>
+    <>
       <main className={`text-white grid items-center h-full`}>
-        <div className="grid grid-cols-3 fixed top-0 left-0 h-full w-full place-items-center -z-50">
-          {Array(9)
-            .fill()
-            .map((_, i) => (
-              <Star key={i} />
-            ))}
-        </div>
+        <AnimateBg />
         {children}
       </main>
-    </AnimatePresence>
+    </>
   );
 }
