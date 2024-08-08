@@ -25,12 +25,10 @@ const InputForm = ({ id, input, error, handleChange, textarea = false }) => {
         <div className="w-full relative">
           <input
             onChange={handleChange}
-            placeholder={`ingrese su ${id === "name" ? "nombre" : "email"}`}
+            placeholder={`${id === "name" ? "example" : "example@gmail.com"}`}
             className={`w-full py-1 px-2 resize-none bg-transparent outline-none border-b-2 shadow ${
               !error
-                ? `focus:border-indigo-700 ${
-                    input ? " border-green-800" : "border-orange-600"
-                  }`
+                ? `focus:border-indigo-700 ${input ? " border-green-800" : "border-orange-600"}`
                 : "border-red-600 focus:border-red-800"
             }`}
             type="text"

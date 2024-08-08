@@ -15,12 +15,12 @@ export default async function sendEmail(name, email, message) {
         from_email: email,
         message,
       },
-      userId
+      userId,
     );
 
-    return {success: "Mensaje enviado correctamente."}
+    return { success: "Mensaje enviado correctamente." };
   } catch (error) {
     console.error("Error al enviar el correo electrónico: ", error);
-    return {error: "Hubo un error al enviar el correo electrónico."}
+    return { error: "Hubo un error al enviar el correo electrónico." };
   }
 }

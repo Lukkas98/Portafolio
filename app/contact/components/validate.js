@@ -4,7 +4,7 @@ const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
 export default function validate(
   id,
   inputs = { name: "", email: "", message: "" },
-  prevErrors = {}
+  prevErrors = {},
 ) {
   const errors = { ...prevErrors };
 
@@ -18,8 +18,7 @@ export default function validate(
 
     case "email":
       if (!inputs.email) errors.email = "Debes colocar un Email";
-      else if (!emailRegex.test(inputs.email))
-        errors.email = "Debes colocar un Email válido";
+      else if (!emailRegex.test(inputs.email)) errors.email = "Debes colocar un Email válido";
       else if (!emailRegex2.test(inputs.email))
         errors.email = "El Email debe ser 'gmail' o 'hotmail'";
       else errors.email = "";
@@ -27,10 +26,8 @@ export default function validate(
 
     case "message":
       if (!inputs.message) errors.message = "El mensaje no puede estar vacio";
-      else if (inputs.message.length > 500)
-        errors.message = "El mensaje es demasiado largo";
-      else if(inputs.message.length < 10)
-        errors.message = "El mensaje es demasiado corto"
+      else if (inputs.message.length > 500) errors.message = "El mensaje es demasiado largo";
+      else if (inputs.message.length < 10) errors.message = "El mensaje es demasiado corto";
       else errors.message = "";
       return errors;
 

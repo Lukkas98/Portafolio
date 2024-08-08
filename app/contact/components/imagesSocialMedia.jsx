@@ -35,7 +35,7 @@ export default function ImageSocialMedia({ images }) {
               {actualKey === i && (
                 <motion.span
                   className="hidden lg:block pointer-events-none text-xs absolute whitespace-nowrap -top-5 left-16"
-                  initial={{ opacity: 0, y: -200, x:"50%" }}
+                  initial={{ opacity: 0, y: -200, x: "50%" }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -100 }}
                 >
