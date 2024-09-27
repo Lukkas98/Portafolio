@@ -8,6 +8,9 @@ import {
   tailwind,
   react,
   redux,
+  nextjs,
+  mongoose,
+  mongodb,
 } from "@lukkas98/icons";
 
 /* eslint import/no-anonymous-default-export: [2, {"allowArray": true}] */
@@ -21,12 +24,18 @@ export default [
     images: ["/images/PI/1.png", "/images/PI/2.png", "/images/PI/3.png"],
     technologies: [html, css, javascript, react, redux, node, express, postgresql],
     text: (
-      <p className=" bg-slate-800 px-4 py-2 rounded-lg">
-        En un lapso de dos semanas, desarrollé esta aplicación, que fue el primer proyecto de Henry.
-        Esta aplicación consume una API externa. Incorpora ordenamientos combinados, paginado
-        dinámico y la capacidad de buscar cualquier videojuego. Utiliza una base de datos interna
-        que permite la creación de nuevos juegos a través de un formulario específico.
-      </p>
+      <div class="bg-slate-800 p-6 rounded-lg shadow-lg text-white">
+        <h2 class="text-xl font-bold mb-4">Proyecto de Henry</h2>
+        <p class="leading-relaxed mb-4">
+          En un lapso de dos semanas, desarrollé esta aplicación como parte de mi primer proyecto en
+          Henry. La aplicación consume una API externa y cuenta con funcionalidades de ordenamientos
+          combinados, paginado dinámico y un sistema de búsqueda de videojuegos.
+        </p>
+        <p class="leading-relaxed">
+          Además, integra una base de datos interna que permite la creación de nuevos juegos
+          mediante un formulario especializado.
+        </p>
+      </div>
     ),
   },
   {
@@ -43,23 +52,30 @@ export default [
     ],
     technologies: [html, css, javascript, react, redux, node, express, postgresql, tailwind],
     text: (
-      <div className=" bg-slate-800 px-4 py-2 rounded-lg">
-        <p>
-          Bienvenido al proyecto final de Henry, donde yo más un equipo de cinco personas nos unimos
-          para desarrollar una red social completamente en español. Hemos optimizado la experiencia
-          de usuario para facilitar la creación de publicaciones y el intercambio de código e ideas.
-          también, tendrás la capacidad de marcar publicaciones como favoritas. Para una experiencia
-          más avanzada, ofrecemos una membresía premium que incluye un logo exclusivo y la
-          funcionalidad de subir videos.
-          <br />
-          <i>Estas son las implementaciones que posee la aplicación:</i>
+      <div class="bg-slate-800 p-6 rounded-lg shadow-lg text-white">
+        <h2 class="text-2xl font-bold mb-4">Proyecto Final de Henry</h2>
+        <p class="leading-relaxed mb-4">
+          Bienvenido al proyecto final de Henry, donde junto con un equipo de cinco personas,
+          desarrollamos una red social completamente en español. Hemos optimizado la experiencia de
+          usuario para facilitar la creación de publicaciones y el intercambio de código e ideas.
         </p>
-        <br />
-        <p>
-          Autenticación de terceros, Pasarela de pagos, Filtros combinados, Subida de archivos
-          (utilizando Firebase), Uso de local storage, Sistema de puntuación, Panel de
-          administración, Notificaciones por email, Borrado lógico.
+        <p class="leading-relaxed mb-4">
+          Además, podrás marcar publicaciones como favoritas. Para una experiencia más avanzada,
+          ofrecemos una membresía premium que incluye un logo exclusivo y la capacidad de subir
+          videos.
         </p>
+        <p class="italic mb-4">Estas son las implementaciones que posee la aplicación:</p>
+        <ul class="list-disc list-inside space-y-2 pl-4">
+          <li>Autenticación de terceros</li>
+          <li>Pasarela de pagos</li>
+          <li>Filtros combinados</li>
+          <li>Subida de archivos (utilizando Firebase)</li>
+          <li>Uso de local storage</li>
+          <li>Sistema de puntuación</li>
+          <li>Panel de administración</li>
+          <li>Notificaciones por email</li>
+          <li>Borrado lógico</li>
+        </ul>
       </div>
     ),
   },
@@ -77,10 +93,17 @@ export default [
     ],
     technologies: [html, css, javascript, react, redux, node, express, postgresql],
     text: (
-      <p className=" bg-slate-800 px-4 py-2 rounded-lg">
-        Esta aplicación fue realizada durante el curso de Henry, puedes buscar y guardar como
-        favoritos a los personajes de la serie Rick and Morty. posee filtros combinados y un login
-      </p>
+      <div class="bg-slate-800 p-6 rounded-lg shadow-lg text-white">
+        <h2 class="text-xl font-bold mb-4">Aplicación de Rick and Morty</h2>
+        <p class="leading-relaxed mb-4">
+          Esta aplicación fue desarrollada durante el curso de Henry, y te permite buscar y guardar
+          como favoritos a los personajes de la serie <strong>Rick and Morty</strong>.
+        </p>
+        <p class="leading-relaxed">
+          La aplicación cuenta con filtros combinados y un sistema de login falso para simular
+          autenticación de usuario.
+        </p>
+      </div>
     ),
   },
   {
@@ -97,11 +120,18 @@ export default [
     ],
     technologies: [html, css, javascript],
     text: (
-      <p className=" bg-slate-800 px-4 py-2 rounded-lg">
-        Juego hecho con HTML, css y javascript puro, me enfrente a varios problemas al
-        desarrollarlo, el juego tiene un cronometro y un contador de puntos conforme vayan pasando
-        niveles se agregan nuevas cartas
-      </p>
+      <div class="bg-slate-800 p-6 rounded-lg shadow-lg text-white">
+        <h2 class="text-xl font-bold mb-4">Memory Game</h2>
+        <p class="leading-relaxed mb-4">
+          Este juego fue desarrollado utilizando <strong>HTML</strong>, <strong>CSS</strong> y{" "}
+          <strong>JavaScript vanilla</strong>. Durante su desarrollo, me enfrenté a varios desafíos,
+          pero logré dejarlo funcional y completo.
+        </p>
+        <p class="leading-relaxed">
+          Conforme avanzas de nivel, se agregan nuevas cartas, lo que aumenta la dificultad y hace
+          el juego más emocionante.
+        </p>
+      </div>
     ),
   },
   {
@@ -118,12 +148,57 @@ export default [
     ],
     technologies: [html, css, javascript],
     text: (
-      <p className=" bg-slate-800 px-4 py-2 rounded-lg">
-        Juego hecho con HTML, css y javascript puro.
-        <br />
-        Consiste en un gameplay sencillo donde se presenta un color en RGB y el usuario debe
-        seleccionar el correcto. hay 2 dificultades, fácil con 3 colores y difícil con 6
-      </p>
+      <div class="bg-slate-800 p-6 rounded-lg shadow-lg text-white">
+        <h2 class="text-xl font-bold mb-4">Color Game en HTML, CSS y JavaScript</h2>
+        <p class="leading-relaxed mb-4">
+          Este juego fue desarrollado utilizando <strong>HTML</strong>, <strong>CSS</strong> y{" "}
+          <strong>JavaScript puro</strong>.
+        </p>
+        <p class="leading-relaxed mb-4">
+          El gameplay es sencillo: se muestra un color en formato <strong>RGB</strong>, y el usuario
+          debe seleccionar el color correcto entre las opciones.
+        </p>
+        <p class="leading-relaxed">
+          El juego tiene dos niveles de dificultad: <strong>fácil</strong> con 3 colores y{" "}
+          <strong>difícil</strong> con 6 colores.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 6,
+    title: "Ecomerce - Clinic-Cell",
+    subtitle: "Un pequeño e-commerce hecho con Next.js",
+    coverImage: "/images/Ecomerce/1.png",
+    github: "https://github.com/Lukkas98/ecomerce-clinicell",
+    images: [
+      "/images/Ecomerce/1.png",
+      "/images/Ecomerce/2.png",
+      "/images/Ecomerce/3.png",
+      "/images/Ecomerce/4.png",
+    ],
+    technologies: [html, css, javascript, react, nextjs, tailwind, mongodb, mongoose],
+    text: (
+      <div class="bg-slate-800 p-6 rounded-lg shadow-lg text-white">
+        <h2 class="text-2xl font-bold mb-4">E-commerce con Next.js, Mongoose y Firebase</h2>
+        <p class="leading-relaxed mb-4">
+          Esta aplicación permite a los usuarios realizar compras y pagos. Además, cuenta con
+          funciones de búsqueda y filtros para los productos. Aunque no incluye una pasarela de
+          pagos, los pagos se gestionan vía <strong>WhatsApp</strong>.
+        </p>
+        <p class="leading-relaxed mb-4">
+          La aplicación está optimizada con un <strong>diseño responsive</strong>, asegurando una
+          experiencia fluida tanto en dispositivos móviles como en escritorio.
+        </p>
+        <p class="font-semibold mb-2">Implementaciones principales:</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Autenticación de administrador</li>
+          <li>Filtros combinados</li>
+          <li>Subida de archivos (utilizando Firebase)</li>
+          <li>Panel de administración</li>
+          <li>Diseño responsive</li>
+        </ul>
+      </div>
     ),
   },
 ];
