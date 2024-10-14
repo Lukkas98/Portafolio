@@ -1,42 +1,38 @@
 "use client";
-
 import { motion } from "framer-motion";
 
 const letterVariants = {
   initial: {
     y: 0,
+    color: "#fb923c",
   },
   animate: {
     opacity: [0.7, 1],
-    y: [2, -2],
+    y: [3, -3],
+    color: ["#fb923c", "#fff"],
     transition: {
-      duration: 0.3,
+      duration: 0.4,
       repeat: Infinity,
       repeatType: "mirror",
     },
   },
 };
 
-const AnimatedText = ({ text }) => {
+const AnimatedText = ({ text, className }) => {
   return (
-    <motion.h1
-      className="flex tracking-wide text-4xl lg:text-6xl h-fit w-fit bg-orange-700 rounded-3xl py-2 px-5 my-0 mx-auto"
+    <motion.h2
+      className={`${className} flex tracking-wide h-fit w-fit mx-auto`}
       initial="initial"
       animate="animate"
       variants={{ animate: { transition: { staggerChildren: 0.2 } } }}
-      whileHover={{
-        color: "#18dcff",
-        textShadow: "1px 1px 1px #000",
-        backgroundColor: "#272727",
-        scale: 1.1,
-      }}
+      whileHover={{ scale: 1.1 }}
     >
       {text.split("").map((letter, index) => (
         <motion.span key={index} variants={letterVariants}>
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
-    </motion.h1>
+    </motion.h2>
   );
 };
 

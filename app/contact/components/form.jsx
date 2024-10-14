@@ -53,7 +53,11 @@ const Form = () => {
   }, [errors, inputs]);
 
   return (
-    <form className="relative bg-orange-700 bg-opacity-20 my-4 mx-auto w-[80%] max-w-[550px] rounded-xl flex flex-col gap-7 border border-orange-600 py-10 px-5">
+    <form
+      className="relative bg-opacity-20 my-4 mx-auto w-[80%] max-w-[550px] 
+    rounded-xl flex flex-col gap-7 border border-gray-900 py-10 px-5
+    bg-gradient-to-r from-transparent to-green-950 shadow-2xl shadow-black"
+    >
       <InputForm input={inputs.name} error={errors.name} id={"name"} handleChange={handleChange} />
       <InputForm
         input={inputs.email}
