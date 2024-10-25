@@ -9,19 +9,34 @@ const getRandomPosition = () => {
   return { x, y };
 };
 
-const generateSquares = (numSquares) => {
-  const squares = [];
-  for (let i = 0; i < numSquares; i++) {
+const getRandomShape = () => {
+  const shapes = ["square", "circle"];
+  return shapes[Math.floor(Math.random() * shapes.length)];
+};
+
+const shapeClass = (shape) => {
+  switch (shape) {
+    case "circle":
+      return "rounded-full w-24 h-24";
+    default:
+      return "w-24 h-24";
+  }
+};
+
+const generateShapes = (numShapes) => {
+  const shapes = [];
+  for (let i = 0; i < numShapes; i++) {
     const { x, y } = getRandomPosition();
-    squares.push(
+    const shape = getRandomShape();
+    shapes.push(
       <motion.div
         key={i}
-        className="absolute w-24 h-24 border-4 border-cyan-400"
+        className={`absolute border-4 border-cyan-900 ${shapeClass(shape)}`}
         style={{
           left: `${x}px`,
           top: `${y}px`,
         }}
-        initial={{ opacity: 0, scale: 0.5 }}
+        initial={{ opacity: 0, scale: 0.5, rotate: Math.random() * 45 }}
         animate={{
           opacity: [0, Math.random() * 1, 0],
           scale: [0.5, Math.random() * (1 - 2) + 1, 0.5],
@@ -32,34 +47,34 @@ const generateSquares = (numSquares) => {
           repeat: Infinity,
           ease: "linear",
         }}
-      />
+      />,
     );
   }
-  return squares;
+  return shapes;
 };
 
 const AnimatedBg = () => {
-  const [numSquares, setNumSquares] = useState(10);
+  const [numShapes, setNumShapes] = useState(10);
 
   useEffect(() => {
-    const updateNumSquares = () => {
+    const updateNumShapes = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-      const newNumSquares = Math.floor((width * height) / 10000);
-      setNumSquares(newNumSquares);
+      const newNumShapes = Math.floor((width * height) / 30000);
+      setNumShapes(newNumShapes);
     };
 
-    updateNumSquares();
-    window.addEventListener("resize", updateNumSquares);
+    updateNumShapes();
+    window.addEventListener("resize", updateNumShapes);
 
     return () => {
-      window.removeEventListener("resize", updateNumSquares);
+      window.removeEventListener("resize", updateNumShapes);
     };
   }, []);
 
   return (
-    <div className="fixed top-0 w-full h-screen overflow-hidden bg-zinc-900 -z-10">
-      {generateSquares(numSquares)}
+    <div className="fixed top-0 w-full h-screen overflow-hidden bg-gradient-to-t -z-10 from-black via-gray-900 to-black">
+      {generateShapes(numShapes)}
     </div>
   );
 };

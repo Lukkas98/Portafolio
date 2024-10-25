@@ -4,6 +4,7 @@ import InputForm from "./inputForm";
 import { useEffect, useState } from "react";
 import sendEmail from "./sendEmail";
 import validate from "./validate";
+import { useTransition } from "react";
 
 const Form = () => {
   const [inputs, setInputs] = useState({ name: "", email: "", message: "" });
@@ -11,25 +12,28 @@ const Form = () => {
   const [id, setId] = useState(null);
   const [formComplete, setFormComplete] = useState(false);
   const [response, setResponse] = useState("");
+  const [loading, startTransition] = useTransition();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      setResponse("");
+  const handleSubmit = (e) => {
+    startTransition(async () => {
+      e.preventDefault();
+      try {
+        setResponse("");
 
-      const { name, email, message } = inputs;
-      const response = await sendEmail(name, email, message);
-      setInputs({ name: "", email: "", message: "" });
-      setId(null);
-      setResponse(response);
-      setTimeout(() => setResponse(""), 3000);
-    } catch (error) {
-      console.error("Error al enviar el formulario:", error);
-      setResponse(
-        "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.",
-      );
-      setTimeout(() => setResponse(""), 3000);
-    }
+        const { name, email, message } = inputs;
+        const response = await sendEmail(name, email, message);
+        setInputs({ name: "", email: "", message: "" });
+        setId(null);
+        setResponse(response);
+      } catch (error) {
+        console.error("Error al enviar el formulario:", error);
+        setResponse(
+          "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.",
+        );
+      } finally {
+        setTimeout(() => setResponse(""), 3000);
+      }
+    });
   };
 
   const handleChange = (e) => {
@@ -53,7 +57,11 @@ const Form = () => {
   }, [errors, inputs]);
 
   return (
-    <form className="relative bg-orange-700 bg-opacity-20 my-4 mx-auto w-[80%] max-w-[550px] rounded-xl flex flex-col gap-7 border border-orange-600 py-10 px-5">
+    <form
+      className="relative bg-opacity-20 my-4 mx-auto w-[80%] max-w-[550px] 
+    rounded-xl flex flex-col gap-7 border border-gray-900 py-10 px-5
+    bg-gradient-to-r from-transparent to-green-950 shadow-2xl shadow-black"
+    >
       <InputForm input={inputs.name} error={errors.name} id={"name"} handleChange={handleChange} />
       <InputForm
         input={inputs.email}
@@ -70,17 +78,18 @@ const Form = () => {
 
       <motion.div
         className="cursor-pointer self-center py-2 px-3 border-none rounded-lg shadow-md"
-        onClick={formComplete ? handleSubmit : null}
+        onClick={formComplete && !loading ? handleSubmit : null}
         animate={{
-          cursor: formComplete ? "pointer" : "not-allowed",
-          backgroundColor: formComplete ? "#0811c7" : "#383838",
-          opacity: formComplete ? 1 : 0.7,
+          cursor: formComplete && !loading ? "pointer" : "not-allowed",
+          backgroundColor: formComplete && !loading ? "#0811c7" : "#383838",
+          opacity: formComplete && !loading ? 1 : 0.7,
         }}
-        whileHover={formComplete ? { scale: 1.2, backgroundColor: "#0811c7" } : {}}
+        whileHover={formComplete && !loading ? { scale: 1.2, backgroundColor: "#0811c7" } : {}}
         whileTap={{ scale: 0.9 }}
       >
-        {formComplete ? "Enviar" : "Formulario incompleto"}
+        {loading ? "Enviando" : formComplete ? "Enviar" : "Formulario incompleto"}
       </motion.div>
+
       <AnimatePresence>
         {response && (
           <motion.div

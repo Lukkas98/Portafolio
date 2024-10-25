@@ -1,8 +1,7 @@
 import "./globals.css";
-import { Gluten } from "next/font/google";
+import { Raleway } from "next/font/google";
 
-// const inter = Inter({ subsets: ["latin"] });
-const FontGluten = Gluten({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800"] });
 
 export const metadata = {
   title: "Portafolio / Lucas-Palma",
@@ -12,9 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body
-        className={`${FontGluten.className} bg-slate-800 overflow-x-hidden text-shadow`}
-      >
+      <body className={`${raleway.className} bg-slate-800 overflow-x-hidden text-shadow`}>
         {children}
       </body>
     </html>
