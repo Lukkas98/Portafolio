@@ -66,12 +66,12 @@ export default function About() {
   return (
     <section className="min-h-screen max-w-[1500px] mx-auto grid lg:grid-cols-2 justify-center items-center place-items-center p-8 gap-12 overflow-hidden">
       <motion.div
-        className="w-64 h-64 bg-gray-300 rounded-full lg:hidden"
+        className="w-64 h-64 rounded-full lg:hidden shadow-black shadow-2xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.1 }}
       >
-        <p className="flex justify-center items-center h-full text-gray-700">Foto Aquí</p>
+        <Image src="/foto.jpg" alt="Logo" width={256} height={256} className="rounded-full" />
       </motion.div>
 
       <motion.div
@@ -88,7 +88,7 @@ export default function About() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <p className="flex justify-center items-center h-full text-gray-700">Foto Aquí</p>
+          <Image src="/foto.jpg" alt="Logo" width={256} height={256} className="rounded-full" />
         </motion.div>
         <div className="flex items-center">
           <AnimatedText text={"Acerca de Mí"} className={"text-5xl font-semibold mb-5"} />
