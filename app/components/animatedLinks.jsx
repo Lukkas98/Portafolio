@@ -43,7 +43,7 @@ const AnimatedLinks = () => {
           transition={{ type: "spring" }}
           onClick={() => {
             setClickedIndex(i);
-            setTimeout(() => push(link.href), 400);
+            setTimeout(() => push(link.href), 200);
           }}
         >
           <p className="px-3 py-2 inline-block font-normal">{link.title}</p>
