@@ -114,8 +114,12 @@ export default function About() {
       <div>
         <div className="flex justify-evenly">
           {[
-            { title: "LinkedIn", href: "https://www.linkedin.com/in/tu-linkedin", img: linkedin },
-            { title: "GitHub", href: "https://github.com/tu-github", img: github },
+            {
+              title: "LinkedIn",
+              href: "https://www.linkedin.com/in/lucaspalma98",
+              img: linkedin,
+            },
+            { title: "GitHub", href: "https://github.com/lukkas98", img: github },
           ].map((link, i) => (
             <motion.a
               key={i}
