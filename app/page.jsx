@@ -42,7 +42,7 @@ const Home = () => {
             }}
             target="_blank"
             rel="noopener noreferrer"
-            href="/Lucas Palma CV.pdf"
+            href="/CV.pdf"
           >
             Descargar CV
           </motion.a>
