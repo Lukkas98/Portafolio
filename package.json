@@ -13,16 +13,16 @@
     "@lukkas98/icons": "^1.1.0",
     "@tailwindcss/postcss": "^4.3.0",
     "framer-motion": "12.24.10",
-    "next": "16.1.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@types/react": "^18.3.11",
+    "@types/react": "^18.3.28",
     "autoprefixer": "10.4.14",
-    "eslint": "^9",
+    "eslint": "^9.39.4",
     "eslint-config-next": "16.1.1",
-    "postcss": "8.4.40",
-    "tailwindcss": "^4"
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0"
   }
 }

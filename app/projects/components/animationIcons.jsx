@@ -8,7 +8,11 @@ import { useState } from "react";
 export default function AnimationIcons({ objSrc, className = "w-8 h-8" }) {
   const [isHover, setIsHover] = useState(false);
 
-  const text = objSrc.src.split("/")[4].split(".")[0]; // example.123abc.svg //example
+  // objSrc es un string: "/_next/static/media/html.0.wci5enveamg.svg"
+  const segments = objSrc.split("/");
+  const filename = segments[segments.length - 1]; // "html.0.wci5enveamg.svg"
+  const text = filename.split(".")[0]; // "html"
+
   return (
     <motion.div
       onHoverStart={() => setIsHover(true)}

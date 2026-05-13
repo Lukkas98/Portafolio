@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -73,7 +72,7 @@ const AnimatedBg = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 w-full h-screen overflow-hidden bg-gradient-to-t -z-10 from-black via-gray-900 to-black">
+    <div className="fixed top-0 w-full h-screen overflow-hidden bg-linear-to-t -z-10 from-black via-gray-900 to-black">
       {generateShapes(numShapes)}
     </div>
   );

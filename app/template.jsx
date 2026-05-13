@@ -1,7 +1,7 @@
-import AnimatedBg from '@/components/backgroud/animatedBg';
-import dynamic from 'next/dynamic';
+"use client";
+import dynamic from "next/dynamic";
 
-const AnimateBg = dynamic(() => AnimatedBg, { ssr: false });
+const AnimateBg = dynamic(() => import("@/components/backgroud/animatedBg"), { ssr: false });
 
 export default function TemplateRoot({ children }) {
   return (
