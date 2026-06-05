@@ -34,7 +34,7 @@ const Home = () => {
             quality={90}
           />
           <motion.a
-            className="mt-4 w-fit mx-auto absolute -bottom-8 md:-bottom-9 lg:-bottom-12 from-gray-600 to-gray-800 bg-gradient-to-b 
+            className="mt-4 w-fit mx-auto absolute -bottom-8 md:-bottom-9 lg:-bottom-12 from-gray-600 to-gray-800 bg-linear-to-b 
             rounded-xl shadow-md text-sm lg:text-base px-2 py-1 font-semibold"
             whileHover={{
               scale: 1.05,
@@ -59,10 +59,9 @@ const Home = () => {
           </h1>
           <AnimatedText text={"Web Developer"} className="text-4xl font-semibold my-2" />
           <div className="w-fit mx-2">
-            <p className="text-base mb-2 to-transparent from-40% from-blue-950 px-3 py-2 rounded-2xl bg-gradient-to-l text-gray-200 shadow shadow-black">
-              Soy un desarrollador web autodidacta con mucho entusiasmo por aprender. Aunque estoy
-              empezando, ya he construido varios proyectos personales, incluido un pequeño
-              e-commerce funcional.
+            <p className="text-base mb-2 to-transparent from-40% from-blue-950 px-3 py-2 rounded-2xl bg-linear-to-l text-gray-200 shadow shadow-black">
+              Soy un desarrollador web autodidacta con mucho entusiasmo por aprender. Ya he
+              construido varios proyectos personales, incluido un pequeño e-commerce funcional.
             </p>
             <div className="flex gap-2 items-center justify-around my-3">
               {[
@@ -82,7 +81,7 @@ const Home = () => {
                 </motion.div>
               ))}
             </div>
-            <p className="text-base mb-6 to-transparent from-green-950 px-3 py-2 rounded-2xl bg-gradient-to-r text-gray-200 shadow shadow-black">
+            <p className="text-base mb-6 to-transparent from-green-950 px-3 py-2 rounded-2xl bg-linear-to-r text-gray-200 shadow shadow-black">
               Me encanta trabajar con tecnologías como Next.js y React. Me enfoco en mejorar mis
               habilidades, y siempre estoy buscando nuevos desafíos para seguir aprendiendo.
             </p>

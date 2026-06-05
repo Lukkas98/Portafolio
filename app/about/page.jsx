@@ -13,11 +13,8 @@ import {
   express,
   tailwind,
   sequelize,
-  webpack,
   react,
   redux,
-  nodemon,
-  bootstrap,
   mongoose,
   reactRouter,
   zod,
@@ -29,31 +26,21 @@ import {
   git,
   github,
   linkedin,
+  typescript,
 } from "@lukkas98/icons";
 import AnimatedText from "@/components/animateText";
 import Image from "next/image";
 import BackButton from "@/components/backButton";
 
 const stack = {
-  tegnologies: [html, css, javascript, mongodb, node, postgresql],
+  tegnologies: [html, css, javascript, mongodb, node, postgresql, typescript],
   frameworks: [nextjs, express, tailwind],
-  libraries: [
-    sequelize,
-    webpack,
-    react,
-    redux,
-    nodemon,
-    bootstrap,
-    mongoose,
-    reactRouter,
-    zod,
-    "icons/framerMotion.svg",
-  ],
+  libraries: [sequelize, react, redux, mongoose, reactRouter, zod, "icons/framerMotion.svg"],
   toolsAndServices: [netlify, vercel, trello, npm, pnpm, git, github],
 };
 
 const stackForMapping = [
-  { title: "Tegnologías", array: stack.tegnologies },
+  { title: "Tecnologías", array: stack.tegnologies },
   { title: "Frameworks", array: stack.frameworks },
   { title: "Librerías", array: stack.libraries },
   {
@@ -64,7 +51,7 @@ const stackForMapping = [
 
 export default function About() {
   return (
-    <section className="min-h-screen max-w-[1500px] mx-auto grid lg:grid-cols-2 justify-center items-center place-items-center p-8 gap-12 overflow-hidden">
+    <section className="min-h-screen max-w-375 mx-auto grid lg:grid-cols-2 justify-center items-center place-items-center p-8 gap-12 overflow-hidden">
       <motion.div
         className="w-64 h-64 rounded-full lg:hidden shadow-black shadow-2xl"
         initial={{ opacity: 0 }}
@@ -94,28 +81,35 @@ export default function About() {
           <AnimatedText text={"Acerca de Mí"} className={"text-5xl font-semibold mb-5"} />
           <BackButton side={"right"} />
         </div>
+        <p>¡Hola! 👋 Soy Lucas, desarrollador Full Stack de Buenos Aires, Argentina 🇦🇷.</p>
         <p>
-          ¡Hola! 👋 Soy Lucas, tengo 26 años y vivo en Buenos Aires, Argentina. Me apasionan los
-          videojuegos 🎮 y el desarrollo web 💻. Aunque no tengo experiencia laboral formal, llevo
-          tiempo trabajando en proyectos personales, siempre buscando aprender y mejorar mis
-          habilidades con tecnologías como{" "}
+          Me especializo en el desarrollo de aplicaciones web utilizando tecnologías como{" "}
           <span className="text-blue-500 font-semibold">React</span>,
-          <span className="text-blue-500 font-semibold"> Next.js</span>, y{" "}
-          <span className="text-blue-500 font-semibold">Tailwind CSS</span>.
+          <span className="text-blue-500 font-semibold"> Next.js</span>,
+          <span className="text-blue-500 font-semibold">Tailwind CSS</span>,
+          <span className="text-blue-500 font-semibold">TypeScript</span>,
+          <span className="text-blue-500 font-semibold">Node.js</span>, y{" "}
+          <span className="text-blue-500 font-semibold">MongoDB</span>.
         </p>
         <p>
-          Estoy buscando mi primera oportunidad laboral para seguir creciendo en este hermoso mundo
-          del desarrollo web 🌐. Me considero una persona curiosa, con muchas ganas de seguir
-          aprendiendo y enfrentando nuevos desafíos. 🚀
+          Actualmente desarrollo y mantengo un e-commerce en producción, donde trabajo en nuevas
+          funcionalidades, optimización y mantenimiento continuo. También cuento con experiencia
+          construyendo aplicaciones full stack, integrando bases de datos, APIs y herramientas
+          modernas del ecosistema web.
+        </p>
+        <p>
+          Fuera del desarrollo, me apasionan los videojuegos 🎮 y el aprendizaje constante. Siempre
+          estoy buscando mejorar mis habilidades, enfrentar nuevos desafíos y seguir creciendo
+          profesionalmente. 🚀
         </p>
       </motion.div>
 
-      {/* Tegnologías y contacto */}
+      {/* Tecnologías y contacto */}
       <div>
         <div className="flex justify-evenly">
           {[
-            { title: "LinkedIn", href: "https://www.linkedin.com/in/tu-linkedin", img: linkedin },
-            { title: "GitHub", href: "https://github.com/tu-github", img: github },
+            { title: "LinkedIn", href: "https://www.linkedin.com/in/lucaspalma98/", img: linkedin },
+            { title: "GitHub", href: "https://github.com/Lukkas98", img: github },
           ].map((link, i) => (
             <motion.a
               key={i}
@@ -126,7 +120,7 @@ export default function About() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base px-6 py-3 bg-gradient-to-b from-gray-700 to-transparent rounded-2xl transition-colors
+              className="text-base px-6 py-3 bg-linear-to-b from-gray-700 to-transparent rounded-2xl transition-colors
               flex items-center gap-3 hover:bg-gray-800 shadow-black shadow hover:shadow-gray-600"
             >
               {link.title}

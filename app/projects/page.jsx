@@ -22,7 +22,7 @@ export default function ProjectShowcase() {
         {data.map((project, index) => (
           <motion.div
             key={project.id}
-            className="rounded-xl h-[30rem] relative top-0 shadow-md bg-gray-800 
+            className="rounded-xl h-120 relative top-0 shadow-md bg-gray-800 
           cursor-pointer hover:z-10 transition-transform duration-500
           hover:shadow-white shadow-black hover:scale-125 bg-opacity-50"
             onClick={() => setSelectedId(project.id)}
@@ -61,7 +61,7 @@ export default function ProjectShowcase() {
             onClick={() => setSelectedId(null)}
           >
             <motion.div
-              className="bg-gray-900 w-[85%] max-w-[1400px] h-auto z-50 max-h-[90vh] p-6 
+              className="bg-gray-900 w-[85%] max-w-350 h-auto z-50 max-h-[90vh] p-6 
               rounded-2xl shadow-2xl text-white overflow-y-auto overflow-x-hidden relative flex flex-col"
               initial={{ scale: 0.2 }}
               animate={{ scale: 1 }}
@@ -69,7 +69,7 @@ export default function ProjectShowcase() {
               onClick={(e) => e.stopPropagation()}
             >
               <div
-                className="sticky top-0 text-2xl cursor-pointer text-red-100 z-[100] self-end
+                className="sticky top-0 text-2xl cursor-pointer text-red-100 z-100 self-end
                 bg-red-700 hover:bg-red-800 px-2 py-1 rounded transition-all mr-2"
                 onClick={() => setSelectedId(null)}
               >
@@ -82,7 +82,7 @@ export default function ProjectShowcase() {
                 href={selectedProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-100 text-center mt-5 block bg-gradient-to-b transition-all duration-300
+                className="text-blue-100 text-center mt-5 block bg-linear-to-b transition-all duration-300
                 from-blue-500 to-blue-900 px-3 py-2 rounded-2xl shadow shadow-black
                 hover:shadow-white hover:text-gray-300 font-semibold"
               >
@@ -94,7 +94,7 @@ export default function ProjectShowcase() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`from-green-600 to-green-900    
-                text-blue-100 text-center mt-5 block bg-gradient-to-b transition-all duration-300
+                text-blue-100 text-center mt-5 block bg-linear-to-b transition-all duration-300
                   px-3 py-2 rounded-2xl shadow shadow-black
                 hover:shadow-white hover:text-gray-300 font-semibold`}
                 >
@@ -102,7 +102,7 @@ export default function ProjectShowcase() {
                 </a>
               ) : (
                 <div
-                  className="text-gray-300 text-center mt-5 block bg-gradient-to-b transition-all duration-300
+                  className="text-gray-300 text-center mt-5 block bg-linear-to-b transition-all duration-300
                   from-slate-400 to-slate-700 px-3 py-2 rounded-2xl shadow shadow-gray-600 
                   font-semibold cursor-not-allowed"
                 >
